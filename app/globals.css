@@ -1,4 +1,15 @@
 /* styles/globals.css */
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, cupcake;
+}
+
+@tailwind base;
+@tailwind utilities;
+@tailwind utilities;
+
+
 .main-content {
   display: flex;
   flex-direction: column;

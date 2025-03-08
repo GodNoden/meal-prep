@@ -16,7 +16,7 @@ export default function Home() {
     //   <DashboardPreview />
     //   <Footer />
     // </main>
-    <main>
+    <main data-theme="cupcake">
       <div className="main-content">
         <ProfileButton />
         <SearchBar />
