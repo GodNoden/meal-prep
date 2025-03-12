@@ -46,7 +46,7 @@ export default function SearchBar() {
         />
       </label>
       
-      <button onClick={handleSearch} class="btn btn-neutral join-item">
+      <button onClick={handleSearch} className="btn btn-neutral join-item">
         Buscar
       </button>
       
