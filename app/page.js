@@ -7,6 +7,8 @@ import ProfileButton from "./components/ProfileButton";
 import SearchBar from "./components/SearchBar";
 import RecipeCarousel from "./components/RecipeCarousel";
 import FunctionButtons from "./components/FunctionButtons";
+import RecipeCard from "./components/RecipeCard";
+import AddFoodModal from "./components/AddFoodModal";
 
 export default function Home() {
   return (
@@ -26,6 +28,8 @@ export default function Home() {
         <FunctionButtons />
         <Features />
         <DashboardPreview />
+        <RecipeCard />
+        <AddFoodModal />
       </div>
       <Footer />
     </main>

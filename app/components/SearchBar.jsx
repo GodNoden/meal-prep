@@ -1,56 +1,37 @@
-"use client"
-// components/SearchBar.jsx
-import { useState } from "react";
-
-export default function SearchBar() {
-  const [query, setQuery] = useState("");
-
-  const handleSearch = () => {
-    // Lógica para buscar recetas o ingredientes
-    console.log("Searching for:", query);
-  };
-
+export default function Navbar() {
   return (
-    <div className="search-bar">
-      {/* <input
-        type="text"
-        placeholder="Buscar Receta o Ingrediente"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button onClick={handleSearch}>Buscar</button> */}
-      <label className="input">
-        <svg
-          className="h-[1em] opacity-50"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24">
-          <g
-            strokeLinejoin="round"
-            strokeLinecap="round"
-            strokeWidth="2.5"
-            fill="none"
-            stroke="currentColor"
+    <div className="navbar bg-base-100">
+      <div className="flex-1">
+        <a className="btn btn-ghost normal-case text-xl">NutriTrack</a>
+      </div>
+      <div className="flex-none">
+        <div className="dropdown dropdown-end">
+          <label tabIndex={0} className="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <circle cx="11" cy="11" r="8">
-            </circle>
-            <path d="m21 21-4.3-4.3">
-            </path>
-          </g>
-        </svg>
-        <input
-          type="search"
-          required
-          placeholder="Buscar Receta o Ingrediente"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-      </label>
-      
-      <button onClick={handleSearch} className="btn btn-neutral join-item">
-        Buscar
-      </button>
-      
+            <li><a href="/progress">Mi progreso</a></li>
+            <li><a href="/add-food">Añadir comida</a></li>
+            <li><a href="/menu-weekly">Menú semanal</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-
   );
 }
