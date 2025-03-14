@@ -9,6 +9,7 @@ import RecipeCarousel from "./components/RecipeCarousel";
 import FunctionButtons from "./components/FunctionButtons";
 import RecipeCard from "./components/RecipeCard";
 import AddFoodModal from "./components/AddFoodModal";
+import FoodTrackingApp from "./components/FoodTrackingApp";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
         <RecipeCard />
         <AddFoodModal />
       </div>
+      <FoodTrackingApp/>
       <Footer />
     </main>
   );
