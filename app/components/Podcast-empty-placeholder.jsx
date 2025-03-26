@@ -1,4 +1,4 @@
-import { Button } from "@/registry/new-york/ui/Button"
+import { Button } from "@/registry/new-york/ui/button"
 import {
   Dialog,
   DialogContent,

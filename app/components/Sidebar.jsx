@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/Button"
+import { Button } from "@/registry/new-york/ui/button"
 import { ScrollArea } from "@/registry/new-york/ui/scroll-area"
 
 import { Playlist } from "../data/playlists"

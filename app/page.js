@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import Image from "next/image"
 import { PlusCircle } from "lucide-react"
 
-import { Button } from "@/registry/new-york/ui/Button"
+import { Button } from "@/registry/new-york/ui/button"
 import { ScrollArea, ScrollBar } from "@/registry/new-york/ui/scroll-area"
 import { Separator } from "@/registry/new-york/ui/separator"
 import {
@@ -12,10 +12,10 @@ import {
   TabsTrigger,
 } from "@/registry/new-york/ui/tabs"
 
-import { AlbumArtwork } from "./components/album-artwork"
-import { Menu } from "./components/menu"
-import { PodcastEmptyPlaceholder } from "./components/podcast-empty-placeholder"
-import { Sidebar } from "./components/sidebar"
+import { AlbumArtwork } from "./components/Album-artwork"
+import { Menu } from "./components/Menu"
+import { PodcastEmptyPlaceholder } from "./components/Podcast-empty-placeholder"
+import { Sidebar } from "./components/Sidebar"
 import { listenNowAlbums, madeForYouAlbums } from "./data/albums"
 import { playlists } from "./data/playlists"
 
