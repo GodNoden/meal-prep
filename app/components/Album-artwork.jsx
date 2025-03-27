@@ -13,7 +13,7 @@ import {
   ContextMenuTrigger,
 } from "@/registry/new-york/ui/context-menu"
 
-import { Album } from "../data/albums"
+import { album} from "../data/albums"
 import { playlists } from "../data/playlists"
 
 // interface AlbumArtworkProps extends React.HTMLAttributes<HTMLDivElement> {

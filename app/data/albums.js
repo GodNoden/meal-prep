@@ -1,9 +1,3 @@
-export interface Album {
-    name: string
-    artist: string
-    cover: string
-}
-
 export const listenNowAlbums = [
     {
         name: "React Rendezvous",
@@ -69,3 +63,10 @@ export const madeForYouAlbums = [
             "https://images.unsplash.com/photo-1490300472339-79e4adc6be4a?w=300&dpr=2&q=80",
     },
 ]
+
+const album = {
+    listenNowAlbums,
+    madeForYouAlbums,
+};
+
+export default album;
