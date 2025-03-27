@@ -1,7 +1,7 @@
-import Image from "next/image"
-import { PlusCircle } from "lucide-react"
+import Image from "next/image";
+import { PlusCircle } from "lucide-react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 import {
   ContextMenu,
   ContextMenuContent,
@@ -11,26 +11,18 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/registry/new-york/ui/context-menu"
+} from "@/registry/new-york/ui/context-menu";
 
-import { album} from "../data/albums"
-import { playlists } from "../data/playlists"
+import { playlists } from "../data/playlists";
 
-// interface AlbumArtworkProps extends React.HTMLAttributes<HTMLDivElement> {
-//   album: Album
-//   aspectRatio?: "portrait" | "square"
-//   width?: number
-//   height?: number
-// }
-
-export function AlbumArtwork(
+export function AlbumArtwork({
   album,
   aspectRatio = "portrait",
-  width,
-  height,
+  width = 300, // Default width
+  height = 300, // Default height
   className,
   ...props
-) {
+}) {
   return (
     <div className={cn("space-y-3", className)} {...props}>
       <ContextMenu>
@@ -91,5 +83,5 @@ export function AlbumArtwork(
         <p className="text-xs text-muted-foreground">{album.artist}</p>
       </div>
     </div>
-  )
+  );
 }
