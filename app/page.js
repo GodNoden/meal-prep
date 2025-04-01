@@ -16,7 +16,7 @@ import { AlbumArtwork } from "./components/Album-artwork"
 import { Menu } from "./components/Menu"
 import { PodcastEmptyPlaceholder } from "./components/Podcast-empty-placeholder"
 import { Sidebar } from "./components/Sidebar"
-import { listenNowAlbums, madeForYouAlbums } from "./data/albums"
+import { trendingRecipes, madeForYouRecipes } from "./data/albums"
 import { playlists } from "./data/playlists"
 
 export const metadata = {
@@ -76,10 +76,10 @@ export default function MusicPage() {
                       <div className="flex items-center justify-between">
                         <div className="space-y-1">
                           <h2 className="text-2xl font-semibold tracking-tight">
-                            Listen Now
+                            Recomendado para ti 🍽️🫵
                           </h2>
                           <p className="text-sm text-muted-foreground">
-                            Top picks for you. Updated daily.
+                            Recetas que se adaptan a tus gustos y necesidades.
                           </p>
                         </div>
                       </div>
@@ -87,10 +87,10 @@ export default function MusicPage() {
                       <div className="relative">
                         <ScrollArea>
                           <div className="flex space-x-4 pb-4">
-                            {listenNowAlbums.map((album) => (
+                            {trendingRecipes.map((recipe) => (
                               <AlbumArtwork
-                                key={album.name}
-                                album={album}
+                                key={recipe.name}
+                                recipe={recipe}
                                 className="w-[250px]"
                                 aspectRatio="portrait"
                                 width={250}
@@ -103,20 +103,20 @@ export default function MusicPage() {
                       </div>
                       <div className="mt-6 space-y-1">
                         <h2 className="text-2xl font-semibold tracking-tight">
-                          Made for You
+                          Trending 🔥
                         </h2>
                         <p className="text-sm text-muted-foreground">
-                          Your personal playlists. Updated daily.
+                          Recetas en tendencia ahora mismo.
                         </p>
                       </div>
                       <Separator className="my-4" />
                       <div className="relative">
                         <ScrollArea>
                           <div className="flex space-x-4 pb-4">
-                            {madeForYouAlbums.map((album) => (
+                            {madeForYouRecipes.map((recipe) => (
                               <AlbumArtwork
-                                key={album.name}
-                                album={album}
+                                key={recipe.name}
+                                recipe={recipe}
                                 className="w-[150px]"
                                 aspectRatio="square"
                                 width={150}

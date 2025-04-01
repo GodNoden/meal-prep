@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PlusCircle } from "lucide-react";
-
+import dynamic from "next/dynamic";
+import CircularProgress from "./CircularProgress";
 import { cn } from "@/lib/utils";
 import {
   ContextMenu,
@@ -12,25 +13,26 @@ import {
   ContextMenuSubTrigger,
   ContextMenuTrigger,
 } from "@/registry/new-york/ui/context-menu";
-
 import { playlists } from "../data/playlists";
 
 export function AlbumArtwork({
-  album,
+  recipe,
   aspectRatio = "portrait",
   width = 300, // Default width
   height = 300, // Default height
   className,
   ...props
 }) {
+  const { calories, time, proteins, carbs, fats } = recipe.information;
+
   return (
     <div className={cn("space-y-3", className)} {...props}>
       <ContextMenu>
         <ContextMenuTrigger>
           <div className="overflow-hidden rounded-md">
             <Image
-              src={album.cover}
-              alt={album.name}
+              src={recipe.cover}
+              alt={recipe.name}
               width={width}
               height={height}
               className={cn(
@@ -79,8 +81,49 @@ export function AlbumArtwork({
         </ContextMenuContent>
       </ContextMenu>
       <div className="space-y-1 text-sm">
-        <h3 className="font-medium leading-none">{album.name}</h3>
-        <p className="text-xs text-muted-foreground">{album.artist}</p>
+        <h3 className="font-medium leading-none">{recipe.name}</h3>
+        <div className="flex justify-between space-x-2">
+          <div className="w-12 h-12">
+            <CircularProgress
+              value={time}
+              maxValue={60}
+              text={`${time}m`}
+              color={"4caf50"}
+            />
+          </div>
+          <div className="w-12 h-12">
+            <CircularProgress
+              value={calories}
+              maxValue={1000}
+              text={`${calories}`}
+              color={"ff9800"}
+            />
+          </div>
+          <div className="w-12 h-12">
+            <CircularProgress
+              value={proteins}
+              maxValue={50}
+              text={`${proteins}g`}
+              color={"2196f3"}
+            />
+          </div>
+          <div className="w-12 h-12">
+            <CircularProgress
+              value={carbs}
+              maxValue={100}
+              text={`${carbs}g`}
+              color={"#9c27b0"}
+            />
+          </div>
+          <div className="w-12 h-12">
+            <CircularProgress
+              value={fats}
+              maxValue={50}
+              text={`${fats}g`}
+              color="#f44336"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
